@@ -6,7 +6,7 @@ using EMovie.Models;
 
 namespace EMovie.ViewModels
 {
-    public class RandomViewModel
+    public class RandomMovieViewModel
     {
         public Movie Movies { get; set; }
         public List<Customer> Customers { get; set; }
