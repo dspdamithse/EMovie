@@ -20,6 +20,7 @@ namespace EMovie.Models
         public byte MembershipTypeId { get; set; }
 
         [Display(Name = "Date Of Birth")]
+        [CheckCustomerAge]
         public DateTime? Birthdate { get; set; }
 
 

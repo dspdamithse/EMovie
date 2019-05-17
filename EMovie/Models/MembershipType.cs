@@ -16,5 +16,8 @@ namespace EMovie.Models
         public byte DurationForMonth { get; set; }
         public byte DiscountRate { get; set; }
 
+        public static readonly byte notselected = 0;
+        public static readonly byte freeMembership = 1;
+                
     }
 }

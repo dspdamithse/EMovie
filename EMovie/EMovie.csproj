@@ -219,8 +219,13 @@
     <Compile Include="Migrations\201905161728282_UpdateAllModels.Designer.cs">
       <DependentUpon>201905161728282_UpdateAllModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905170741365_UpdateDatabaseWithModification.cs" />
+    <Compile Include="Migrations\201905170741365_UpdateDatabaseWithModification.Designer.cs">
+      <DependentUpon>201905170741365_UpdateDatabaseWithModification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CheckCustomerAge.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -348,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905161728282_UpdateAllModels.resx">
       <DependentUpon>201905161728282_UpdateAllModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905170741365_UpdateDatabaseWithModification.resx">
+      <DependentUpon>201905170741365_UpdateDatabaseWithModification.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
