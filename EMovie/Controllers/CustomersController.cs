@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using EMovie.Models;
 using EMovie.ViewModels;
+using System.Data.Entity.Validation;
 
 namespace EMovie.Controllers
 {
@@ -36,20 +37,28 @@ namespace EMovie.Controllers
         }
 
         [HttpPost]
-        public ActionResult Save(Customer customer)
+        public ActionResult Save(Customer Customers)
         {
-            if (customer.Id == 0)
-                _context.Customers.Add(customer);
+            if (Customers.Id == 0)
+                _context.Customers.Add(Customers);
             else
             {
-                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
-                customerInDb.Name = customer.Name;
-                customerInDb.Birthdate = customer.Birthdate;
-                customerInDb.MembershipTypeId = customer.MembershipTypeId;
-                customerInDb.IsSubscribedToNewsLetters = customer.IsSubscribedToNewsLetters;
+                var customerInDb = _context.Customers.Single(c => c.Id == Customers.Id);
+                customerInDb.Name = Customers.Name;
+                customerInDb.Birthdate = Customers.Birthdate;
+                customerInDb.MembershipTypeId = Customers.MembershipTypeId;
+                customerInDb.IsSubscribedToNewsLetters = Customers.IsSubscribedToNewsLetters;
+            }
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+                Console.WriteLine(e);
             }
 
-            _context.SaveChanges();
+            
 
             return RedirectToAction("Index", "Customers");
         }

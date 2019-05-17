@@ -9,9 +9,9 @@ namespace EMovie.Models
     public class Customer
     {
         public int Id { get; set; }
-
-        [Required]
+     
         [StringLength(255)]
+        [Required]
         public string Name { get; set; }
         public bool IsSubscribedToNewsLetters { get; set; }
         public MembershipType MembershipType { get; set; }

@@ -215,6 +215,10 @@
     <Compile Include="Migrations\201905161624354_UpdateMembershipTypeName.Designer.cs">
       <DependentUpon>201905161624354_UpdateMembershipTypeName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905161728282_UpdateAllModels.cs" />
+    <Compile Include="Migrations\201905161728282_UpdateAllModels.Designer.cs">
+      <DependentUpon>201905161728282_UpdateAllModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -341,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905161624354_UpdateMembershipTypeName.resx">
       <DependentUpon>201905161624354_UpdateMembershipTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905161728282_UpdateAllModels.resx">
+      <DependentUpon>201905161728282_UpdateAllModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
