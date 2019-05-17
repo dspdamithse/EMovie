@@ -39,6 +39,15 @@ namespace EMovie.Controllers
         [HttpPost]
         public ActionResult Save(Customer Customers)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new CustomerFormViewModel
+                {
+                    Customers = Customers,
+                    MembershipTypes = _context.MembershipTypes.ToList()
+                };
+                return View("CustomerForm", viewModel);
+            }
             if (Customers.Id == 0)
                 _context.Customers.Add(Customers);
             else
