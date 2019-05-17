@@ -38,6 +38,7 @@ namespace EMovie.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer Customers)
         {
             if (!ModelState.IsValid)
