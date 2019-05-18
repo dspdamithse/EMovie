@@ -35,23 +35,26 @@ else
 }
 @section scripts
 {
-    <script>
-        $(document).ready(function () {
-            $("#customers .btn-delete").on("click", function () {
-                var buttonx = $(this);
-                if (confirm("Are you sure you want to delete this customer ?")) {
+<script>
+    $(document).ready(function () {
+        $("#customers .btn-delete").on("click", function () {
+            var buttonx = $(this);
+
+            bootbox.confirm("Are you sure you want to delete this customer ?", function (result) {
+                if (result) {
                     $.ajax({
-                        url: "/api/customers/" + buttonx.attr("data-customer-id"),
-                        method: "DELETE",
-                        success: function () {
-                            buttonx.parents("tr").remove();
-                            console.log("Hello");
-                        }
-                    });
+                    url: "/api/customers/" + buttonx.attr("data-customer-id"),
+                    method: "DELETE",
+                    success: function () {
+                        buttonx.parents("tr").remove();
+                        console.log("Hello");
+                    }
+                });
                 }
             });
         });
-    </script>
+    });
+</script>
 }
 
 
