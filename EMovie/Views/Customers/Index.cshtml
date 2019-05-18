@@ -23,7 +23,7 @@
     $(document).ready(function () {
 
 
-        $("#customers").DataTable({
+        var datatable = $("#customers").DataTable({
             ajax: {
                 url: "/api/customers",
                 dataSrc: ""
@@ -36,7 +36,7 @@
                     }
                  },
                 {
-                    data: "membershipType.ename"
+                    data: "membershipType.name"
                 },
                 {
                     data: "id",
@@ -56,9 +56,8 @@
                     $.ajax({
                     url: "/api/customers/" + buttonx.attr("data-customer-id"),
                     method: "DELETE",
-                    success: function () {
-                        buttonx.parents("tr").remove();
-                        console.log("Hello");
+                        success: function () {
+                        datatable.row(buttonx.parents("tr")).remove().draw();   
                     }
                 });
                 }
