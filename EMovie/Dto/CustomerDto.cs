@@ -15,9 +15,8 @@ namespace EMovie.Dto
         [Required]
         public string Name { get; set; }
         public bool IsSubscribedToNewsLetters { get; set; }
-
         public byte MembershipTypeId { get; set; }
-
+        public MembershipTypeDto MembershipType { get; set; }
         //[CheckCustomerAge]
         public DateTime? Birthdate { get; set; }
     }
