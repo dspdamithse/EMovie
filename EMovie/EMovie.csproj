@@ -247,6 +247,14 @@
     <Compile Include="Migrations\201905190610558_SeedUsers.Designer.cs">
       <DependentUpon>201905190610558_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905190757221_AddPhoneAndHomeCityToTheUsers.cs" />
+    <Compile Include="Migrations\201905190757221_AddPhoneAndHomeCityToTheUsers.Designer.cs">
+      <DependentUpon>201905190757221_AddPhoneAndHomeCityToTheUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905190822212_UpdateUsersAttributeAgain.cs" />
+    <Compile Include="Migrations\201905190822212_UpdateUsersAttributeAgain.Designer.cs">
+      <DependentUpon>201905190822212_UpdateUsersAttributeAgain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CheckCustomerAge.cs" />
@@ -560,6 +568,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905190610558_SeedUsers.resx">
       <DependentUpon>201905190610558_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190757221_AddPhoneAndHomeCityToTheUsers.resx">
+      <DependentUpon>201905190757221_AddPhoneAndHomeCityToTheUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905190822212_UpdateUsersAttributeAgain.resx">
+      <DependentUpon>201905190822212_UpdateUsersAttributeAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -65,6 +65,9 @@ namespace EMovie.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Select Your Home City")]
+        public string HomeCity { get; set; }
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
