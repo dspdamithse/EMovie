@@ -26,9 +26,12 @@ namespace EMovie.Controllers
 
         public ViewResult Index()
         {
-            return View();
-        }
+            if (User.IsInRole(RoleName.ManageMovie))
+                return View("List");
 
+            return View("ReadOnlyList");
+        }
+        [Authorize(Roles = RoleName.ManageMovie)]
         public ViewResult New()
         {
             var genres = _context.Genres.ToList();
